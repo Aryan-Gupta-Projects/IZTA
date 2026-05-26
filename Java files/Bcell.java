@@ -31,11 +31,11 @@ public class Bcell {
     }
 
     // static method to generate a random BCell (initial population)
-    public static Bcell random(int n){
-        double[] r = new double[n];
+    public static Bcell randomB(){
+        double[] r = new double[Sim.dim]; // assuming Sim.dim features for the receptor
         
-        for (int i = 0; i < n; i++) {
-            r[i] = Math.random(); // random value between 0 and 1
+        for (int i = 0; i < Sim.dim; i++) {
+            r[i] = Math.random(); // random value between 0 and 1 for each feature
         }
         return new Bcell(r);
     }
