@@ -15,7 +15,7 @@ public class Antigen {
         double[] f = new double[Sim.DIM]; // assuming Sim.dim features for the antigen
         
         for (int i = 0; i < Sim.DIM; i++) {
-            f[i] = Math.random(); // random value between 0 and 1 for each feature
+            f[i] = 2 * Math.random() - 1;; // random value between -1 and 1 for each feature
         }
         return new Antigen(f);
     } 

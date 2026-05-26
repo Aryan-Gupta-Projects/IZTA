@@ -35,7 +35,7 @@ public class Bcell {
         double[] r = new double[Sim.DIM]; // assuming Sim.DIM features for the receptor
         
         for (int i = 0; i < Sim.DIM; i++) {
-            r[i] = Math.random(); // random value between 0 and 1 for each feature
+            r[i] = r[i] = 2 * Math.random() - 1;; // random value between -1 and 1 for each feature
         }
         return new Bcell(r);
     }
