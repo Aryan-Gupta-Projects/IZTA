@@ -1,10 +1,12 @@
 public class Antigen {
-        public static void main(String[] args) {
-        System.out.println("Hello, I'm an antigen!");
+    //attribute
+    private double[] features;
+    //constructor
+    public Antigen (double[] features){
+        this.features = features;  
     }
-    // attributes go here
-    
-    // constructor goes here
-    
-    // methods go here
+    //getter
+    public double[] getFeatures() {
+    return features;
+    }
 }
