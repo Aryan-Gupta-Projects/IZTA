@@ -1,10 +1,11 @@
 public class Tcell {
-        public static void main(String[] args) {
-        System.out.println("Hello, I'm a T Cell!");
+
+      public static Bcell selectSurvivor(Bcell parent, Bcell[] clones) {
+        Bcell bestClone = AffinityEngine.best(clones);
+        if (bestClone.getAffinity() > parent.getAffinity()) {
+            return bestClone;
+        } else {
+            return parent;
+        }
     }
-    // attributes go here
-    
-    // constructor goes here
-    
-    // methods go here
 }

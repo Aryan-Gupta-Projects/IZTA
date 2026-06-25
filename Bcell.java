@@ -32,11 +32,33 @@ public class Bcell {
 
     // static method to generate a random BCell (initial population)
     public static Bcell randomB(){
-        double[] r = new double[Sim.DIM]; // assuming Sim.DIM features for the receptor
+        double[] r = new double[Sim.DIMENSION]; // assuming DIMENSION features for the receptor
         
-        for (int i = 0; i < Sim.DIM; i++) {
-            r[i] = r[i] = 2 * Math.random() - 1; // random value between -1 and 1 for each feature
+        for (int i = 0; i < Sim.DIMENSION; i++) {
+            r[i] = StochasticEngine.getRng().nextGaussian() * Sim.INIT_POP_VARIABILITY; 
         }
+
+        double norm = 0.0;
+        for (int i = 0; i < Sim.DIMENSION; i++) {
+            norm += r[i] * r[i];
+        }
+        norm = Math.sqrt(norm);
+        if (norm > 1e-9) {
+            for (int i = 0; i < Sim.DIMENSION; i++) {
+                r[i] /= norm;
+            }
+        }
+
         return new Bcell(r);
+    }
+
+    public Bcell cloner() {
+        double[] newReceptor = new double[receptor.length];
+        for (int i = 0; i < receptor.length; i++) {
+            newReceptor[i] = receptor[i];
+        }
+        Bcell copy = new Bcell(newReceptor);
+        copy.setAffinity(this.affinity);
+        return copy;
     }
 }
