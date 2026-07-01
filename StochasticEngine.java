@@ -3,9 +3,10 @@ import java.util.Random;
 public class StochasticEngine {
 
 private static final Random rng = new Random(Sim.SEED); //seed for reproducibility
+
     public static Random getRng() {
-    return rng;
-}
+        return rng;
+    }
 
     public static Bcell[] randomPopulation(int size) {
         Bcell[] bcells = new Bcell[size];
