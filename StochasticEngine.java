@@ -22,7 +22,7 @@ private static final Random rng = new Random(Sim.SEED); //seed for reproducibili
         Bcell clone = cell.cloner();
         double[] receptor = clone.getReceptor();
         for (int i = 0; i< receptor.length; i++) {
-            if (rng.nextDouble() < 0.15){
+            if (rng.nextDouble() < Sim.MUTATION_CHANCE) {
                 Mutated = true;
                 double mutation = rng.nextGaussian() * BasicRate; // Gaussian mutation
                 receptor[i] += mutation;
@@ -40,8 +40,8 @@ private static final Random rng = new Random(Sim.SEED); //seed for reproducibili
                 receptor[i] /= norm;
             }
         }
-        if (Mutated && rng.nextDouble() < 0.5) {
-            clone.setAffinity(-1.0);
+        if (Mutated && rng.nextDouble() < Sim.LETHAL_MUTATION_CHANCE) {
+            clone.setAffinity(-1.0); //Imitates a dead cell because a dead cell cannot be selected, just like a cell with a lower affinity score compared to the other clones
         }
 
         clone.setReceptor(receptor);
