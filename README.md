@@ -213,7 +213,6 @@ Source code and commit history:
 
 [[GitHub Link](https://github.com/Aryan-Gupta-Projects/IZTA)]
 
-`----------------------------------------------------------------------------`
 
 # Planned Phases:
 Phase 1: Local Immunological Architecture — Getting the foundational systems to work correctly
