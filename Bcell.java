@@ -35,7 +35,7 @@ public class Bcell {
         double[] r = new double[Sim.DIMENSION]; // assuming DIMENSION features for the receptor
         
         for (int i = 0; i < Sim.DIMENSION; i++) {
-            r[i] = StochasticEngine.getRng().nextGaussian() * Sim.INIT_POP_VARIABILITY; 
+            r[i] = StochasticEngine.getRng().nextGaussian() * Sim.INIT_POP_VARIABILITY;
         }
 
         double norm = 0.0;

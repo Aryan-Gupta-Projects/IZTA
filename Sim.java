@@ -21,10 +21,10 @@ public class Sim {
         public static final int PLASMA_START = (int) Math.round(0.30 * ITERATIONS);
         public static final int MEMORY_START = (int) Math.round(0.70 * ITERATIONS);
     //Other Bits and Bobs
-        public static boolean moreData = true; //If true, will print out more information about the simulation, including the metadata of the memory and plasma cells
+        public static boolean moreData = false; //If true, will print out more information about the simulation, including the metadata of the memory and plasma cells
         public static boolean showInitialAntigen = false; //If true, will print out the initial antigen features
         public static boolean makeCSV = false; //If true, will export the simulation data to a CSV file in the Downloads folder
-        public static boolean showLog = true; //If true, will print out the log of the simulation
+        public static boolean showLog = false; //If true, will print out the log of the simulation
         public static int itercount = 1;
         public static Memory memory = new Memory();
         public static List<Log> logs = new ArrayList<>();
@@ -117,7 +117,7 @@ public class Sim {
     }
 
     public static void simConfig(PrintWriter writer) {
-        writer.println("Dimension, Seed,Iterations, Initial Population, Number of Clones, Initial Population Variability, Mutation Magnitude, Mutation Chance, Lethal Mutation Chance, Plasma Threshold, Memory Threshold, Plasma Start, Memory Start");
+        writer.println("Dimension, Seed,Iterations, Initial Population, Number of Clones, Initial Population Variability, Mutation Magnitude, Mutation Chance, Lethal Mutation Chance, Differentation Chance, Plasma Threshold, Memory Threshold, Plasma Start, Memory Start");
         writer.println(DIMENSION + "," + SEED + "," + ITERATIONS + "," + INITIAL_POPULATION + "," + NUM_CLONES + "," + INIT_POP_VARIABILITY + "," + MUTATION_MAGNITUDE + "," + MUTATION_CHANCE + "," + LETHAL_MUTATION_CHANCE + "," + PLASMA_THRESHOLD + "," + MEMORY_THRESHOLD + "," + PLASMA_START + "," + MEMORY_START);
         writer.println();
     }
@@ -126,7 +126,7 @@ public class Sim {
         File downloadsDir = new File(System.getProperty("user.home"), "Downloads");
         File outputFile;
 
-        if (downloadsDir.exists() && downloadsDir.isDirectory() && makeCSV == false) {
+        if (downloadsDir.exists() && downloadsDir.isDirectory()) {
             outputFile = new File(downloadsDir, filename);
         } else {
             outputFile = new File(filename);
