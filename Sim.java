@@ -28,7 +28,7 @@ public class Sim {
         public static int itercount = 1;
         public static Memory memory = new Memory();
         public static List<Log> logs = new ArrayList<>();
-        public static String FILENAME = "ITZA_CSV_TEST6inIZTA";
+        public static String FILENAME = "ITZA_CSV_ANALYSIS";
 
 //-------------------------------------------------------------------------------------
 
