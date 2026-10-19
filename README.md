@@ -213,6 +213,8 @@ Source code and commit history:
 
 [[GitHub Link](https://github.com/Aryan-Gupta-Projects/IZTA)]
 
+# AI Use Statement:
+Although sparingly, AI assistance was used. AI was only used to help with certain Java code concepts I was not familiar with, and occasionally used to commit in GitHub. I did not use AI in the writing of the manuscript at all.
 
 # Planned Phases:
 Phase 1: Local Immunological Architecture — Getting the foundational systems to work correctly
