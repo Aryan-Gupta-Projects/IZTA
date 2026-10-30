@@ -208,10 +208,7 @@ Future analysis improvements include:
 Full project write-up:
 
 [[Project Write-Up Link](https://docs.google.com/document/d/1BwaBW5BQIMzAwGZO4Sd3LhPyicAioByKHMe-7vc1V7Q/edit?usp=sharing)]
-
-Source code and commit history:
-
-[[GitHub Link](https://github.com/Aryan-Gupta-Projects/IZTA)]
+(Also uploaded as a PDF file here)
 
 # AI Use Statement:
 Although sparingly, AI assistance was used. AI was only used to help with certain Java code concepts I was not familiar with, and occasionally used to commit in GitHub. I did not use AI in the writing of the manuscript at all.
